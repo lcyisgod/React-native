@@ -19,26 +19,8 @@ import TextInputVC from './TextInputPage';
 import SliderVC from './SliderPage';
 import SwitchVC from './SwitchPage';
 import PickerVC from './PickerPage';
+import WebViewVC from './WebViewPage';
 
-class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Home!</Text>
-            </View>
-        );
-    }
-}
-
-class SettingsScreen extends React.Component {
-    render() {
-        return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Settings!</Text>
-            </View>
-        );
-    }
-}
 
 const HomeStackNavigator = createStackNavigator({
     MainVC:{
@@ -96,7 +78,13 @@ const HomeStackNavigator = createStackNavigator({
         navigationOptions:({navigation}) =>({
             headerTitle:'Picker'
         })
-    }
+    },
+    WebViewVC:{
+        screen:WebViewVC,
+        navigationOptions:({navigation}) =>({
+            headerTitle:'WebView'
+        })
+    },
 });
 
 HomeStackNavigator.navigationOptions=({navigation}) =>{

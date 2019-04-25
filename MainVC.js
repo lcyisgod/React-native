@@ -59,6 +59,8 @@ export default class MainVC extends Component<Props>{
             this.props.navigation.navigate('SwitchVC');
         }else if (info === "Picker"){
             this.props.navigation.navigate('PickerVC');
+        }else if (info === "WebView"){
+            this.props.navigation.navigate('WebViewVC');
         }
     }
 
@@ -78,7 +80,8 @@ export default class MainVC extends Component<Props>{
                     {key:'Slider'},
                     {key:'Switch'},
                     {key:'Alert'},
-                    {key:'Picker'}]}
+                    {key:'Picker'},
+                    {key:'WebView'}]}
                 renderItem={({item})=>
                     <TouchableWithoutFeedback onPress={()=>{this.gotoNextPage(item.key)}}>
                         <Text style={styles.itemStyle}>{item.key}</Text>
