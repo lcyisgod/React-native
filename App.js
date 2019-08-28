@@ -20,6 +20,9 @@ import SliderVC from './SliderPage';
 import SwitchVC from './SwitchPage';
 import PickerVC from './PickerPage';
 import WebViewVC from './WebViewPage';
+import GestureVC from './GesturePage';
+import SpringVC from './SpringPage';
+import DecayVC from './DecayPage';
 
 
 const HomeStackNavigator = createStackNavigator({
@@ -82,9 +85,27 @@ const HomeStackNavigator = createStackNavigator({
     WebViewVC:{
         screen:WebViewVC,
         navigationOptions:({navigation}) =>({
-            headerTitle:'WebView'
+            headerTitle:'Animation'
         })
     },
+    GestureVC:{
+        screen:GestureVC,
+        navigationOptions:({navigation})=>({
+            headerTitle:'Gesture'
+        })
+    },
+    SpringVC:{
+        screen:SpringVC,
+        navigationOptions:({navigation})=>({
+            headerTitle:'SpringAnimation'
+        })
+    },
+    DecayVC:{
+        screen:DecayVC,
+        navigationOptions:({navigation})=>({
+            headerTitle:'DecayAnimation'
+        })
+    }
 });
 
 HomeStackNavigator.navigationOptions=({navigation}) =>{

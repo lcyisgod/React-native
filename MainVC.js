@@ -8,6 +8,7 @@ import {
     TouchableWithoutFeedback,
     Dimensions,
     FlatList,
+    StatusBar,
 } from 'react-native';
 
 
@@ -59,8 +60,10 @@ export default class MainVC extends Component<Props>{
             this.props.navigation.navigate('SwitchVC');
         }else if (info === "Picker"){
             this.props.navigation.navigate('PickerVC');
-        }else if (info === "WebView"){
+        }else if (info === "Animation"){
             this.props.navigation.navigate('WebViewVC');
+        }else if (info === "Gesture"){
+            this.props.navigation.navigate('GestureVC');
         }
     }
 
@@ -81,7 +84,8 @@ export default class MainVC extends Component<Props>{
                     {key:'Switch'},
                     {key:'Alert'},
                     {key:'Picker'},
-                    {key:'WebView'}]}
+                    {key:'Animation'},
+                    {key:'Gesture'}]}
                 renderItem={({item})=>
                     <TouchableWithoutFeedback onPress={()=>{this.gotoNextPage(item.key)}}>
                         <Text style={styles.itemStyle}>{item.key}</Text>
